@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO(content): substituir pelo nome real -->
+  <title>Projetos — [SEU NOME]</title>
+  <meta name="description" content="Seleção de projetos de [ÁREA] por [SEU NOME]. Explore por categoria e abra cada trabalho." />
+  <!-- TODO(content): substituir pelo usuário real do GitHub -->
+  <link rel="canonical" href="https://[USUARIO].github.io/projetos.html" />
+
+  <!-- Open Graph textual -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <!-- TODO(content): substituir nome e dados OG -->
+  <meta property="og:site_name" content="[SEU NOME]" />
+  <meta property="og:title" content="Projetos — [SEU NOME]" />
+  <meta property="og:description" content="Seleção de projetos de [ÁREA] por [SEU NOME]. Explore por categoria e abra cada trabalho." />
+  <meta property="og:url" content="https://[USUARIO].github.io/projetos.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- Header Global -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <!-- TODO(content): substituir pelo nome real ou marca -->
+      <a href="index.html" class="brand" aria-label="Página inicial">[SEU NOME]</a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link">Início</a></li>
+          <li><a href="projetos.html" class="site-nav__link" aria-current="page">Projetos</a></li>
+          <li><a href="sobre.html" class="site-nav__link">Sobre</a></li>
+          <li><a href="contato.html" class="site-nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu">
+        <svg class="icon icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="icon icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Mobile Overlay -->
+  <nav id="mobile-nav" class="mobile-menu" data-mobile-menu aria-label="Navegação mobile">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Início</a></li>
+      <li class="mobile-menu__item"><a href="projetos.html" class="mobile-menu__link" aria-current="page">Projetos</a></li>
+      <li class="mobile-menu__item"><a href="sobre.html" class="mobile-menu__link">Sobre</a></li>
+      <li class="mobile-menu__item"><a href="contato.html" class="mobile-menu__link">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section class="section" id="portfolio">
+      <div class="container">
+        <!-- Cabeçalho da Página -->
+        <div class="section-head" style="margin-bottom: var(--space-6);">
+          <span class="section-head__label">Portfólio</span>
+          <h1 class="section-head__title">Projetos</h1>
+          <!-- TODO(content): substituir área -->
+          <p class="section-head__lead">Seleção de 6 projetos de [ÁREA]. Filtre por categoria ou abra um card para ver o trabalho completo.</p>
+        </div>
+
+        <!-- Filtros Acessíveis (visíveis com JavaScript ativo) -->
+        <div class="filters">
+          <div class="filters__list" role="toolbar" aria-label="Filtros de categoria de projetos">
+            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">Todos</button>
+            <button type="button" class="filter-btn" data-filter="frontend" aria-pressed="false">Front-end</button>
+            <button type="button" class="filter-btn" data-filter="backend" aria-pressed="false">Back-end</button>
+            <button type="button" class="filter-btn" data-filter="fullstack" aria-pressed="false">Full-stack</button>
+            <button type="button" class="filter-btn" data-filter="design" aria-pressed="false">Design</button>
+          </div>
+          <span class="filters__status" data-filter-status aria-live="polite">6 projetos</span>
+        </div>
+
+        <!-- Grade com os 6 Projetos -->
+        <div class="projects-grid">
+          <!-- Projeto 01 (Front-end) -->
+          <article class="project-card" data-category="frontend">
+            <!-- TODO(content): substituir pela URL do projeto -->
+            <a class="project-card__link" href="https://github.com/[USUARIO]/[REPO-01]" target="_blank" rel="noopener noreferrer">
+              <figure class="project-card__media">
+                <!-- TODO(content): alt descritivo -->
+                <img src="assets/img/projects/projeto-01.webp" alt="Tela do projeto [PROJETO 01] com interface limpa e responsiva" width="1600" height="1000" loading="lazy" decoding="async" />
+              </figure>
+              <div class="project-card__body">
+                <p class="project-card__meta">
+                  <span>[ANO]</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Front-end</span>
+                </p>
+                <h2 class="project-card__title">[PROJETO 01]</h2>
+                <p class="project-card__summary">[RESUMO: Dashboard leve que reúne vendas e tráfego em uma única tela, com leitura rápida]</p>
+                <ul class="tag-list" aria-label="Tecnologias utilizadas">
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                </ul>
+                <div class="project-card__footer">
+                  <span class="project-card__cta">
+                    Ver projeto
+                    <span class="sr-only">(abre em nova aba)</span>
+                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projeto 02 (Full-stack) -->
+          <article class="project-card" data-category="fullstack">
+            <!-- TODO(content): substituir pela URL do projeto -->
+            <a class="project-card__link" href="https://github.com/[USUARIO]/[REPO-02]" target="_blank" rel="noopener noreferrer">
+              <figure class="project-card__media">
+                <img src="assets/img/projects/projeto-02.webp" alt="Tela do projeto [PROJETO 02] destacando interface de gerenciamento" width="1600" height="1000" loading="lazy" decoding="async" />
+              </figure>
+              <div class="project-card__body">
+                <p class="project-card__meta">
+                  <span>[ANO]</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Full-stack</span>
+                </p>
+                <h2 class="project-card__title">[PROJETO 02]</h2>
+                <p class="project-card__summary">[RESUMO: Aplicação completa integrando interface responsiva com serviços de backend rápidos]</p>
+                <ul class="tag-list" aria-label="Tecnologias utilizadas">
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                </ul>
+                <div class="project-card__footer">
+                  <span class="project-card__cta">
+                    Ver projeto
+                    <span class="sr-only">(abre em nova aba)</span>
+                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projeto 03 (Design) -->
+          <article class="project-card" data-category="design">
+            <!-- TODO(content): substituir pela URL do projeto -->
+            <a class="project-card__link" href="https://github.com/[USUARIO]/[REPO-03]" target="_blank" rel="noopener noreferrer">
+              <figure class="project-card__media">
+                <img src="assets/img/projects/projeto-03.webp" alt="Tela do projeto [PROJETO 03] com documentação de design system" width="1600" height="1000" loading="lazy" decoding="async" />
+              </figure>
+              <div class="project-card__body">
+                <p class="project-card__meta">
+                  <span>[ANO]</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Design</span>
+                </p>
+                <h2 class="project-card__title">[PROJETO 03]</h2>
+                <p class="project-card__summary">[RESUMO: Sistema de design focado em acessibilidade, consistência visual e componentes reutilizáveis]</p>
+                <ul class="tag-list" aria-label="Tecnologias utilizadas">
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                </ul>
+                <div class="project-card__footer">
+                  <span class="project-card__cta">
+                    Ver projeto
+                    <span class="sr-only">(abre em nova aba)</span>
+                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projeto 04 (Front-end) -->
+          <article class="project-card" data-category="frontend">
+            <!-- TODO(content): substituir pela URL do projeto -->
+            <a class="project-card__link" href="https://github.com/[USUARIO]/[REPO-04]" target="_blank" rel="noopener noreferrer">
+              <figure class="project-card__media">
+                <img src="assets/img/projects/projeto-04.webp" alt="Tela do projeto [PROJETO 04] demonstrando componentes acessíveis" width="1600" height="1000" loading="lazy" decoding="async" />
+              </figure>
+              <div class="project-card__body">
+                <p class="project-card__meta">
+                  <span>[ANO]</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Front-end</span>
+                </p>
+                <h2 class="project-card__title">[PROJETO 04]</h2>
+                <p class="project-card__summary">[RESUMO: Plataforma de conteúdo com tipografia refinada e pontuação perfeita no Lighthouse]</p>
+                <ul class="tag-list" aria-label="Tecnologias utilizadas">
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                </ul>
+                <div class="project-card__footer">
+                  <span class="project-card__cta">
+                    Ver projeto
+                    <span class="sr-only">(abre em nova aba)</span>
+                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projeto 05 (Back-end) -->
+          <article class="project-card" data-category="backend">
+            <!-- TODO(content): substituir pela URL do projeto -->
+            <a class="project-card__link" href="https://github.com/[USUARIO]/[REPO-05]" target="_blank" rel="noopener noreferrer">
+              <figure class="project-card__media">
+                <img src="assets/img/projects/projeto-05.webp" alt="Tela do projeto [PROJETO 05] com arquitetura de microsserviços" width="1600" height="1000" loading="lazy" decoding="async" />
+              </figure>
+              <div class="project-card__body">
+                <p class="project-card__meta">
+                  <span>[ANO]</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Back-end</span>
+                </p>
+                <h2 class="project-card__title">[PROJETO 05]</h2>
+                <p class="project-card__summary">[RESUMO: API de alta performance com autenticação segura, cache distribuído e documentação OpenAPI]</p>
+                <ul class="tag-list" aria-label="Tecnologias utilizadas">
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                </ul>
+                <div class="project-card__footer">
+                  <span class="project-card__cta">
+                    Ver projeto
+                    <span class="sr-only">(abre em nova aba)</span>
+                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projeto 06 (Full-stack) -->
+          <article class="project-card" data-category="fullstack">
+            <!-- TODO(content): substituir pela URL do projeto -->
+            <a class="project-card__link" href="https://github.com/[USUARIO]/[REPO-06]" target="_blank" rel="noopener noreferrer">
+              <figure class="project-card__media">
+                <img src="assets/img/projects/projeto-06.webp" alt="Tela do projeto [PROJETO 06] com integração de ponta a ponta" width="1600" height="1000" loading="lazy" decoding="async" />
+              </figure>
+              <div class="project-card__body">
+                <p class="project-card__meta">
+                  <span>[ANO]</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Full-stack</span>
+                </p>
+                <h2 class="project-card__title">[PROJETO 06]</h2>
+                <p class="project-card__summary">[RESUMO: Ferramenta de colaboração em tempo real com sincronização otimista e interface minimalista]</p>
+                <ul class="tag-list" aria-label="Tecnologias utilizadas">
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                </ul>
+                <div class="project-card__footer">
+                  <span class="project-card__cta">
+                    Ver projeto
+                    <span class="sr-only">(abre em nova aba)</span>
+                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Estado Vazio (exibido quando nenhum card corresponder ao filtro) -->
+          <div class="empty-state" data-empty-state>
+            <h3 class="empty-state__title">Nenhum projeto nesta categoria ainda.</h3>
+            <p class="empty-state__text">Novos trabalhos entram aqui conforme ficam prontos.</p>
+            <button type="button" class="btn btn--secondary" data-reset-filter>Ver todos</button>
+          </div>
+        </div>
+
+        <!-- CTA Final de Continuidade -->
+        <div style="margin-top: var(--space-8); padding-top: var(--space-7); border-top: 1px solid var(--color-line);">
+          <h2 style="font-size: var(--fs-h2); margin-bottom: var(--space-2);">Tem algo parecido em mente?</h2>
+          <p style="font-size: var(--fs-lead); color: var(--color-ink-2); margin-bottom: var(--space-5);">Me conte o contexto e o que você precisa resolver.</p>
+          <a href="contato.html" class="btn btn--primary">Vamos conversar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div>
+        <!-- TODO(content): substituir pelo nome real e cargo -->
+        <p class="site-footer__brand-title">[SEU NOME]</p>
+        <p class="site-footer__tagline">[SEU CARGO] em [CIDADE].</p>
+      </div>
+
+      <nav aria-label="Navegação secundária do rodapé">
+        <ul class="site-footer__nav-list">
+          <li><a href="index.html" class="site-footer__link">Início</a></li>
+          <li><a href="projetos.html" class="site-footer__link" aria-current="page">Projetos</a></li>
+          <li><a href="sobre.html" class="site-footer__link">Sobre</a></li>
+          <li><a href="contato.html" class="site-footer__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <ul class="site-footer__social-list" aria-label="Redes sociais">
+        <li>
+          <a href="https://github.com/[USUARIO]" class="site-footer__link" target="_blank" rel="noopener noreferrer">
+            GitHub <span class="sr-only">(abre em nova aba)</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/[USUARIO]/" class="site-footer__link" target="_blank" rel="noopener noreferrer">
+            LinkedIn <span class="sr-only">(abre em nova aba)</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="site-footer__meta">
+        <p>© <span data-year>2026</span> [SEU NOME]. Todos os direitos reservados.</p>
+        <p>Feito com HTML, CSS e JavaScript.</p>
+        <a href="#portfolio" class="site-footer__back-to-top" data-back-to-top>
+          Voltar ao topo
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

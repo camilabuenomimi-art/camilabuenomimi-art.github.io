@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO(content): substituir pelo nome real e cargo -->
+  <title>[SEU NOME] — [SEU CARGO]</title>
+  <!-- TODO(content): substituir pela descrição definitiva -->
+  <meta name="description" content="Portfólio de [SEU NOME], [SEU CARGO] em [CIDADE]. Projetos de [ÁREA] com foco em clareza, performance e detalhe." />
+  <!-- TODO(content): substituir pelo usuário real do GitHub -->
+  <link rel="canonical" href="https://[USUARIO].github.io/" />
+
+  <!-- Open Graph textual -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <!-- TODO(content): substituir nome e dados OG -->
+  <meta property="og:site_name" content="[SEU NOME]" />
+  <meta property="og:title" content="[SEU NOME] — [SEU CARGO]" />
+  <meta property="og:description" content="Portfólio de [SEU NOME], [SEU CARGO] em [CIDADE]. Projetos de [ÁREA] com foco em clareza, performance e detalhe." />
+  <meta property="og:url" content="https://[USUARIO].github.io/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- Header Global -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <!-- TODO(content): substituir pelo nome real ou marca -->
+      <a href="index.html" class="brand" aria-label="Página inicial">[SEU NOME]</a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link" aria-current="page">Início</a></li>
+          <li><a href="projetos.html" class="site-nav__link">Projetos</a></li>
+          <li><a href="sobre.html" class="site-nav__link">Sobre</a></li>
+          <li><a href="contato.html" class="site-nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu">
+        <svg class="icon icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="icon icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Mobile Overlay -->
+  <nav id="mobile-nav" class="mobile-menu" data-mobile-menu aria-label="Navegação mobile">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link" aria-current="page">Início</a></li>
+      <li class="mobile-menu__item"><a href="projetos.html" class="mobile-menu__link">Projetos</a></li>
+      <li class="mobile-menu__item"><a href="sobre.html" class="mobile-menu__link">Sobre</a></li>
+      <li class="mobile-menu__item"><a href="contato.html" class="mobile-menu__link">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero__status">
+          <span class="hero__status-dot" aria-hidden="true"></span>
+          <span>Disponível para novos projetos</span>
+        </div>
+
+        <!-- TODO(content): substituir pelo nome real -->
+        <h1 class="hero__title">[SEU NOME]</h1>
+
+        <!-- TODO(content): substituir pelo cargo e foco -->
+        <p class="hero__role">[SEU CARGO] — [FOCO]</p>
+
+        <p class="hero__lead">Construo produtos digitais com clareza, performance e atenção ao detalhe. Do problema à interface final, sem ruído.</p>
+
+        <!-- TODO(content): substituir pelos dados reais -->
+        <p class="hero__bio">Trabalho com [ÁREA] há [ANOS DE EXPERIÊNCIA] anos. Atualmente em [CIDADE], aberto a [TIPO DE OPORTUNIDADE].</p>
+
+        <div class="hero__actions">
+          <a href="#destaques" class="btn btn--primary">Ver projetos</a>
+          <a href="#contato" class="btn btn--secondary">Falar comigo</a>
+        </div>
+
+        <div class="hero__meta">
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Base</span>
+            <!-- TODO(content): substituir por cidade e país -->
+            <span class="hero__meta-value">[CIDADE], [PAÍS]</span>
+          </div>
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Foco</span>
+            <!-- TODO(content): substituir pelo foco profissional -->
+            <span class="hero__meta-value">[FOCO]</span>
+          </div>
+          <div class="hero__meta-item">
+            <span class="hero__meta-label">Status</span>
+            <!-- TODO(content): substituir pela disponibilidade -->
+            <span class="hero__meta-value">[DISPONIBILIDADE]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Projetos em Destaque -->
+    <section class="section" id="destaques" data-reveal>
+      <div class="container">
+        <div class="section-head section-head--with-action">
+          <div>
+            <span class="section-head__label">Selecionados</span>
+            <h2 class="section-head__title">Projetos em destaque</h2>
+            <p class="section-head__lead">Uma amostra do que construí recentemente. Cada card abre o projeto em uma nova aba.</p>
+          </div>
+          <div class="section-head__action">
+            <a href="projetos.html" class="btn btn--ghost">
+              Ver todos os 6 projetos
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Projeto 01 (Front-end) -->
+          <article class="project-card" data-category="frontend">
+            <!-- TODO(content): substituir pela URL do projeto -->
+            <a class="project-card__link" href="https://github.com/[USUARIO]/[REPO-01]" target="_blank" rel="noopener noreferrer">
+              <figure class="project-card__media">
+                <!-- TODO(content): substituir alt da imagem -->
+                <img src="assets/img/projects/projeto-01.webp" alt="Tela do projeto [PROJETO 01] com visual monocromático e navegação fluida" width="1600" height="1000" loading="lazy" decoding="async" />
+              </figure>
+              <div class="project-card__body">
+                <p class="project-card__meta">
+                  <!-- TODO(content): ano do projeto -->
+                  <span>[ANO]</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Front-end</span>
+                </p>
+                <!-- TODO(content): título do projeto -->
+                <h3 class="project-card__title">[PROJETO 01]</h3>
+                <!-- TODO(content): resumo do projeto (máx 160 caracteres) -->
+                <p class="project-card__summary">[RESUMO: O que é + para quem + diferencial ou resultado em até duas linhas visuais]</p>
+                <ul class="tag-list" aria-label="Tecnologias utilizadas">
+                  <!-- TODO(content): tecnologias -->
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                </ul>
+                <div class="project-card__footer">
+                  <span class="project-card__cta">
+                    Ver projeto
+                    <span class="sr-only">(abre em nova aba)</span>
+                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projeto 02 (Full-stack) -->
+          <article class="project-card" data-category="fullstack">
+            <!-- TODO(content): substituir pela URL do projeto -->
+            <a class="project-card__link" href="https://github.com/[USUARIO]/[REPO-02]" target="_blank" rel="noopener noreferrer">
+              <figure class="project-card__media">
+                <!-- TODO(content): substituir alt da imagem -->
+                <img src="assets/img/projects/projeto-02.webp" alt="Tela do projeto [PROJETO 02] destacando interface de gerenciamento" width="1600" height="1000" loading="lazy" decoding="async" />
+              </figure>
+              <div class="project-card__body">
+                <p class="project-card__meta">
+                  <!-- TODO(content): ano do projeto -->
+                  <span>[ANO]</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Full-stack</span>
+                </p>
+                <!-- TODO(content): título do projeto -->
+                <h3 class="project-card__title">[PROJETO 02]</h3>
+                <!-- TODO(content): resumo do projeto -->
+                <p class="project-card__summary">[RESUMO: Aplicação completa integrando interface responsiva com serviços de backend rápidos]</p>
+                <ul class="tag-list" aria-label="Tecnologias utilizadas">
+                  <!-- TODO(content): tecnologias -->
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                </ul>
+                <div class="project-card__footer">
+                  <span class="project-card__cta">
+                    Ver projeto
+                    <span class="sr-only">(abre em nova aba)</span>
+                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <!-- Projeto 03 (Design) -->
+          <article class="project-card" data-category="design">
+            <!-- TODO(content): substituir pela URL do projeto -->
+            <a class="project-card__link" href="https://github.com/[USUARIO]/[REPO-03]" target="_blank" rel="noopener noreferrer">
+              <figure class="project-card__media">
+                <!-- TODO(content): substituir alt da imagem -->
+                <img src="assets/img/projects/projeto-03.webp" alt="Tela do projeto [PROJETO 03] com documentação de design system" width="1600" height="1000" loading="lazy" decoding="async" />
+              </figure>
+              <div class="project-card__body">
+                <p class="project-card__meta">
+                  <!-- TODO(content): ano do projeto -->
+                  <span>[ANO]</span>
+                  <span aria-hidden="true">·</span>
+                  <span>Design</span>
+                </p>
+                <!-- TODO(content): título do projeto -->
+                <h3 class="project-card__title">[PROJETO 03]</h3>
+                <!-- TODO(content): resumo do projeto -->
+                <p class="project-card__summary">[RESUMO: Sistema de design focado em acessibilidade, consistência visual e componentes reutilizáveis]</p>
+                <ul class="tag-list" aria-label="Tecnologias utilizadas">
+                  <!-- TODO(content): tecnologias -->
+                  <li class="tag">[TECNOLOGIA]</li>
+                  <li class="tag">[TECNOLOGIA]</li>
+                </ul>
+                <div class="project-card__footer">
+                  <span class="project-card__cta">
+                    Ver projeto
+                    <span class="sr-only">(abre em nova aba)</span>
+                    <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção: Sobre (Resumo) -->
+    <section class="section" id="sobre" data-reveal>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-head__label">Sobre</span>
+          <h2 class="section-head__title">Design e código, na mesma mesa.</h2>
+        </div>
+
+        <div class="about-bio" style="margin-bottom: var(--space-6);">
+          <!-- TODO(content): bio resumida com dados reais -->
+          <p>Sou [SEU NOME], [SEU CARGO] em [CIDADE]. Trabalho na interseção entre interface, produto e código, com foco em soluções simples para problemas complexos.</p>
+          <p>Prefiro entregas pequenas e bem acabadas a grandes lançamentos sem cuidado. Meu processo começa entendendo o contexto e termina com algo que as pessoas conseguem usar sem instruções.</p>
+        </div>
+
+        <a href="sobre.html" class="btn btn--secondary">Ler mais sobre mim</a>
+      </div>
+    </section>
+
+    <!-- Seção: Faixa de Contato Invertida -->
+    <section class="contact-strip" id="contato" data-reveal>
+      <div class="container">
+        <span class="section-head__label">Contato</span>
+        <h2 class="section-head__title">Vamos conversar.</h2>
+        <!-- TODO(content): substituir tipo de oportunidade e prazo -->
+        <p class="section-head__lead">Aberto a [TIPO DE OPORTUNIDADE]. Respondo em até [PRAZO].</p>
+
+        <div class="contact-strip__box">
+          <div class="contact-strip__email-row">
+            <!-- TODO(content): substituir pelo e-mail real -->
+            <a href="mailto:[EMAIL]" class="contact-strip__email">[EMAIL]</a>
+            <div class="contact-strip__actions">
+              <!-- TODO(content): substituir data-email pelo e-mail real -->
+              <button type="button" class="btn btn--inverse" data-copy-email data-email="[EMAIL]" data-feedback-id="home-feedback">
+                <svg class="icon icon-copy" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copiar e-mail</span>
+              </button>
+              <a href="contato.html" class="btn btn--secondary" style="border-color: #ffffff; color: #ffffff;">Página de contato</a>
+            </div>
+          </div>
+
+          <span class="copy-feedback" data-copy-feedback="home-feedback" aria-live="polite" style="color: var(--color-inverse-muted);"></span>
+
+          <div class="contact-strip__socials">
+            <!-- TODO(content): substituir links reais -->
+            <a href="https://github.com/[USUARIO]" class="contact-strip__social-link" target="_blank" rel="noopener noreferrer">
+              GitHub
+              <span class="sr-only">(abre em nova aba)</span>
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/[USUARIO]/" class="contact-strip__social-link" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+              <span class="sr-only">(abre em nova aba)</span>
+              <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div>
+        <!-- TODO(content): substituir pelo nome real e cargo -->
+        <p class="site-footer__brand-title">[SEU NOME]</p>
+        <p class="site-footer__tagline">[SEU CARGO] em [CIDADE].</p>
+      </div>
+
+      <nav aria-label="Navegação secundária do rodapé">
+        <ul class="site-footer__nav-list">
+          <li><a href="index.html" class="site-footer__link">Início</a></li>
+          <li><a href="projetos.html" class="site-footer__link">Projetos</a></li>
+          <li><a href="sobre.html" class="site-footer__link">Sobre</a></li>
+          <li><a href="contato.html" class="site-footer__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <ul class="site-footer__social-list" aria-label="Redes sociais">
+        <!-- TODO(content): links sociais -->
+        <li>
+          <a href="https://github.com/[USUARIO]" class="site-footer__link" target="_blank" rel="noopener noreferrer">
+            GitHub <span class="sr-only">(abre em nova aba)</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/[USUARIO]/" class="site-footer__link" target="_blank" rel="noopener noreferrer">
+            LinkedIn <span class="sr-only">(abre em nova aba)</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="site-footer__meta">
+        <!-- TODO(content): copyright -->
+        <p>© <span data-year>2026</span> [SEU NOME]. Todos os direitos reservados.</p>
+        <p>Feito com HTML, CSS e JavaScript.</p>
+        <a href="#inicio" class="site-footer__back-to-top" data-back-to-top>
+          Voltar ao topo
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

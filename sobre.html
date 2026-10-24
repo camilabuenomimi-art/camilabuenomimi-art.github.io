@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO(content): substituir pelo nome real -->
+  <title>Sobre — [SEU NOME]</title>
+  <meta name="description" content="Conheça a trajetória, as habilidades e os princípios de trabalho de [SEU NOME], [SEU CARGO]." />
+  <!-- TODO(content): substituir pelo usuário real do GitHub -->
+  <link rel="canonical" href="https://[USUARIO].github.io/sobre.html" />
+
+  <!-- Open Graph textual -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <!-- TODO(content): substituir nome e dados OG -->
+  <meta property="og:site_name" content="[SEU NOME]" />
+  <meta property="og:title" content="Sobre — [SEU NOME]" />
+  <meta property="og:description" content="Conheça a trajetória, as habilidades e os princípios de trabalho de [SEU NOME], [SEU CARGO]." />
+  <meta property="og:url" content="https://[USUARIO].github.io/sobre.html" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+  <!-- Header Global -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <!-- TODO(content): substituir pelo nome real ou marca -->
+      <a href="index.html" class="brand" aria-label="Página inicial">[SEU NOME]</a>
+
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul class="site-nav__list">
+          <li><a href="index.html" class="site-nav__link">Início</a></li>
+          <li><a href="projetos.html" class="site-nav__link">Projetos</a></li>
+          <li><a href="sobre.html" class="site-nav__link" aria-current="page">Sobre</a></li>
+          <li><a href="contato.html" class="site-nav__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menu">
+        <svg class="icon icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <svg class="icon icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="display: none;">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Mobile Overlay -->
+  <nav id="mobile-nav" class="mobile-menu" data-mobile-menu aria-label="Navegação mobile">
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item"><a href="index.html" class="mobile-menu__link">Início</a></li>
+      <li class="mobile-menu__item"><a href="projetos.html" class="mobile-menu__link">Projetos</a></li>
+      <li class="mobile-menu__item"><a href="sobre.html" class="mobile-menu__link" aria-current="page">Sobre</a></li>
+      <li class="mobile-menu__item"><a href="contato.html" class="mobile-menu__link">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <section class="section" id="sobre-detalhes">
+      <div class="container">
+        <!-- Cabeçalho da Página -->
+        <div class="section-head">
+          <span class="section-head__label">Sobre</span>
+          <h1 class="section-head__title">Sobre</h1>
+          <!-- TODO(content): substituir pelo cargo e cidade reais -->
+          <p class="section-head__lead">Sou [SEU NOME], [SEU CARGO] em [CIDADE]. Trabalho entre interface, produto e código, com foco em clareza e detalhe.</p>
+        </div>
+
+        <!-- Intro em Duas Colunas: Retrato 4:5 e Bio Estruturada -->
+        <div class="about-intro">
+          <figure class="about-portrait">
+            <!-- TODO(content): substituir alt descritivo da foto -->
+            <img src="assets/img/profile.webp" alt="Foto de perfil de [SEU NOME] em ambiente de trabalho" width="800" height="1000" loading="lazy" decoding="async" />
+            <figcaption>[SEU NOME], [CIDADE], 2026.</figcaption>
+          </figure>
+
+          <div class="about-bio">
+            <!-- TODO(content): bio personalizada nos 3 parágrafos -->
+            <p>Comecei em [ÁREA] em [ANO DE INÍCIO] e desde então venho construindo [TIPO DE PRODUTO] para [PÚBLICO]. Gosto de problemas que exigem entender o contexto antes de escrever a primeira linha de código.</p>
+            <p>Meu trabalho combina design de interface com desenvolvimento front-end: prototipo, testo e implemento. Prefiro entregas pequenas, bem acabadas, a grandes lançamentos sem cuidado.</p>
+            <p>Fora do trabalho, [INTERESSE PESSOAL]. Hoje estou em [CIDADE] e disponível para [TIPO DE OPORTUNIDADE].</p>
+          </div>
+        </div>
+
+        <!-- Seção Stack de Tecnologias -->
+        <div style="margin-bottom: var(--space-8);">
+          <div class="section-head">
+            <span class="section-head__label">Habilidades</span>
+            <h2 class="section-head__title">Stack</h2>
+          </div>
+
+          <div class="stack-grid">
+            <div class="stack-group">
+              <h3 class="stack-group__title">Linguagens</h3>
+              <ul class="tag-list" aria-label="Linguagens de programação">
+                <!-- TODO(content): linguagens reais -->
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+                <li class="tag">JavaScript (ES2020+)</li>
+                <li class="tag">TypeScript</li>
+              </ul>
+            </div>
+
+            <div class="stack-group">
+              <h3 class="stack-group__title">Frameworks e Bibliotecas</h3>
+              <ul class="tag-list" aria-label="Frameworks e bibliotecas">
+                <!-- TODO(content): frameworks reais -->
+                <li class="tag">React</li>
+                <li class="tag">Node.js</li>
+                <li class="tag">Tailwind CSS</li>
+                <li class="tag">Next.js</li>
+              </ul>
+            </div>
+
+            <div class="stack-group">
+              <h3 class="stack-group__title">Ferramentas</h3>
+              <ul class="tag-list" aria-label="Ferramentas utilizadas">
+                <!-- TODO(content): ferramentas reais -->
+                <li class="tag">Git</li>
+                <li class="tag">Figma</li>
+                <li class="tag">VS Code</li>
+                <li class="tag">GitHub Actions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seção Trajetória Profissional -->
+        <div style="margin-bottom: var(--space-8);">
+          <div class="section-head">
+            <span class="section-head__label">Carreira</span>
+            <h2 class="section-head__title">Trajetória</h2>
+          </div>
+
+          <div class="timeline">
+            <!-- TODO(content): itens de trajetória profissional -->
+            <article class="timeline__item">
+              <span class="timeline__period">2024 — Presente</span>
+              <div>
+                <h3 class="timeline__role">[CARGO ATUAL] · [EMPRESA ATUAL]</h3>
+                <p class="timeline__desc">[O QUE VOCÊ FEZ: Desenvolvimento de interfaces de alta performance, arquitetura de componentes e sistemas de design acessíveis.]</p>
+              </div>
+            </article>
+
+            <article class="timeline__item">
+              <span class="timeline__period">2022 — 2024</span>
+              <div>
+                <h3 class="timeline__role">[CARGO ANTERIOR] · [EMPRESA ANTERIOR]</h3>
+                <p class="timeline__desc">[O QUE VOCÊ FEZ: Criação de produtos digitais com foco em usabilidade, escalabilidade e integração com serviços modernos.]</p>
+              </div>
+            </article>
+
+            <article class="timeline__item">
+              <span class="timeline__period">2018 — 2022</span>
+              <div>
+                <h3 class="timeline__role">[FORMAÇÃO ACADÊMICA] · [INSTITUIÇÃO]</h3>
+                <p class="timeline__desc">[DESCRIÇÃO: Bacharelado com foco em ciência da computação, engenharia de software e experiência do usuário.]</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Seção Como Eu Trabalho -->
+        <div style="margin-bottom: var(--space-8);">
+          <div class="section-head">
+            <span class="section-head__label">Filosofia</span>
+            <h2 class="section-head__title">Como eu trabalho</h2>
+          </div>
+
+          <div class="principles-grid">
+            <div class="principle-card">
+              <h3 class="principle-card__title">1. Clareza antes de código.</h3>
+              <p class="principle-card__text">Entender o problema e o contexto evita retrabalho e interfaces desnecessárias.</p>
+            </div>
+            <div class="principle-card">
+              <h3 class="principle-card__title">2. Performance é parte do design.</h3>
+              <p class="principle-card__text">Uma página bonita que demora para abrir não é uma boa experiência.</p>
+            </div>
+            <div class="principle-card">
+              <h3 class="principle-card__title">3. O detalhe é o produto.</h3>
+              <p class="principle-card__text">Estados de foco, textos de erro e espaçamento consistente separam o funcional do memorável.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Final -->
+        <div style="padding-top: var(--space-7); border-top: 1px solid var(--color-line);">
+          <h2 style="font-size: var(--fs-h2); margin-bottom: var(--space-2);">Vamos trabalhar juntos.</h2>
+          <!-- TODO(content): oportunidade -->
+          <p style="font-size: var(--fs-lead); color: var(--color-ink-2); margin-bottom: var(--space-5);">Estou disponível para [TIPO DE OPORTUNIDADE].</p>
+          <a href="contato.html" class="btn btn--primary">Entrar em contato</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Global -->
+  <footer class="site-footer">
+    <div class="container site-footer__grid">
+      <div>
+        <!-- TODO(content): substituir pelo nome real e cargo -->
+        <p class="site-footer__brand-title">[SEU NOME]</p>
+        <p class="site-footer__tagline">[SEU CARGO] em [CIDADE].</p>
+      </div>
+
+      <nav aria-label="Navegação secundária do rodapé">
+        <ul class="site-footer__nav-list">
+          <li><a href="index.html" class="site-footer__link">Início</a></li>
+          <li><a href="projetos.html" class="site-footer__link">Projetos</a></li>
+          <li><a href="sobre.html" class="site-footer__link" aria-current="page">Sobre</a></li>
+          <li><a href="contato.html" class="site-footer__link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <ul class="site-footer__social-list" aria-label="Redes sociais">
+        <li>
+          <a href="https://github.com/[USUARIO]" class="site-footer__link" target="_blank" rel="noopener noreferrer">
+            GitHub <span class="sr-only">(abre em nova aba)</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/[USUARIO]/" class="site-footer__link" target="_blank" rel="noopener noreferrer">
+            LinkedIn <span class="sr-only">(abre em nova aba)</span>
+          </a>
+        </li>
+      </ul>
+
+      <div class="site-footer__meta">
+        <p>© <span data-year>2026</span> [SEU NOME]. Todos os direitos reservados.</p>
+        <p>Feito com HTML, CSS e JavaScript.</p>
+        <a href="#sobre-detalhes" class="site-footer__back-to-top" data-back-to-top>
+          Voltar ao topo
+          <svg class="icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5 12 12 5 19 12"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
