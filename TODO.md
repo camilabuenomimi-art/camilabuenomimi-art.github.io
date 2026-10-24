@@ -45,7 +45,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
 
 ## Fase 0: Preparação de Diretórios e Assets Base
 
-- [ ] **TASK-001**: Criar a estrutura física de pastas do projeto.
+- [x] **TASK-001**: Criar a estrutura física de pastas do projeto.
   - **Caminhos a criar:**
     - `assets/`
     - `assets/css/`
@@ -54,18 +54,18 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     - `assets/img/projects/`
   - **Critério de conclusão:** Todos os diretórios existirem no disco.
 
-- [ ] **TASK-002**: Criar o arquivo `.nojekyll` na raiz do projeto.
+- [x] **TASK-002**: Criar o arquivo `.nojekyll` na raiz do projeto.
   - **Caminho:** `.nojekyll`
   - **Conteúdo:** Arquivo vazio (necessário para impedir que o GitHub Pages ignore arquivos que começam com underline ou aplique processamento Jekyll).
   - **Critério de conclusão:** Arquivo `.nojekyll` presente na raiz do repositório.
 
-- [ ] **TASK-003**: Criar imagens/placeholders base para o projeto.
+- [x] **TASK-003**: Criar imagens/placeholders base para o projeto.
   - **Caminhos:**
     - `assets/img/profile.webp` (ou SVG de placeholder com aspect-ratio 4:5, 800x1000px, fundo `#F5F5F5`, borda `#E4E4E4`, texto mono "FOTO 4:5").
     - `assets/img/projects/projeto-01.webp` até `projeto-06.webp` (ou SVGs/WebP com aspect-ratio 16:10, 1600x1000px, fundo `#F5F5F5`, borda `#E4E4E4`, texto mono indicando "PROJETO 01" a "PROJETO 06").
   - **Critério de conclusão:** As 7 imagens de placeholder existirem nos caminhos corretos sem quebrar o carregamento de `<img src="...">`.
 
-- [ ] **TEST-001**: Teste de validação da estrutura inicial de arquivos.
+- [x] **TEST-001**: Teste de validação da estrutura inicial de arquivos.
   - **Comando:** Executar listagem recursiva de pastas e arquivos no PowerShell (`Get-ChildItem -Recurse`).
   - **Critério de aceite:** Diretórios `assets/css`, `assets/js`, `assets/img/projects` criados, arquivo `.nojekyll` presente e 7 arquivos de placeholder existentes.
 
@@ -73,14 +73,14 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
 
 ## Fase 1: Fundação do Sistema Visual (CSS)
 
-- [ ] **TASK-004**: Criar o arquivo `assets/css/styles.css` e declarar as camadas CSS (`@layer`).
+- [x] **TASK-004**: Criar o arquivo `assets/css/styles.css` e declarar as camadas CSS (`@layer`).
   - **Caminho:** `assets/css/styles.css`
   - **Estrutura obrigatória:**
     ```css
     @layer reset, tokens, base, layout, components, utilities;
     ```
 
-- [ ] **TASK-005**: Implementar `@layer tokens` em `assets/css/styles.css`.
+- [x] **TASK-005**: Implementar `@layer tokens` em `assets/css/styles.css`.
   - **Conteúdo:** Declarar em `:root` todas as variáveis descritas em `docs/DESIGN-SYSTEM.md`:
     - **Cores:** `--color-bg: #ffffff;`, `--color-bg-subtle: #f5f5f5;`, `--color-ink: #0b0b0b;`, `--color-ink-2: #3d3d3d;`, `--color-ink-3: #6b6b6b;`, `--color-line: #e4e4e4;`, `--color-line-strong: #bdbdbd;`, `--color-line-interactive: #8a8a8a;`, `--color-inverse-bg: #0b0b0b;`, `--color-inverse-ink: #ffffff;`, `--color-inverse-muted: #b3b3b3;`, `--color-focus: #0b0b0b;`, `--color-focus-inverse: #ffffff;`
     - **Tipografia:** `--font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;`, `--font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;`
@@ -90,7 +90,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     - **Bordas e Movimento:** `--border: 1px solid var(--color-line);`, `--border-strong: 1px solid var(--color-line-strong);`, `--radius: 2px;`, `--ease-out: cubic-bezier(0.22, 1, 0.36, 1);`, `--dur-fast: 150ms;`, `--dur-base: 250ms;`, `--dur-slow: 600ms;`
     - **Z-index:** `--z-header: 100;`, `--z-menu: 200;`, `--z-skip: 300;`
 
-- [ ] **TASK-006**: Implementar `@layer reset` em `assets/css/styles.css`.
+- [x] **TASK-006**: Implementar `@layer reset` em `assets/css/styles.css`.
   - **Conteúdo:**
     - `box-sizing: border-box` universal (`*, *::before, *::after`).
     - Zerar margens e paddings em `body, h1, h2, h3, p, ul, ol, figure`.
@@ -100,7 +100,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     - `a { color: inherit; text-decoration: none; }`.
     - `ul, ol { list-style: none; padding: 0; }`.
 
-- [ ] **TASK-007**: Implementar `@layer base` e `@layer utilities` em `assets/css/styles.css`.
+- [x] **TASK-007**: Implementar `@layer base` e `@layer utilities` em `assets/css/styles.css`.
   - **Conteúdo:**
     - Estilo de `html` e `body` (background `--color-bg`, color `--color-ink`, font `--font-sans`, line-height `--lh-body`).
     - `:focus-visible` global com outline `2px solid var(--color-focus)` e `outline-offset: 2px`.
@@ -110,7 +110,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     - `.container`: largura máxima `min(100% - (var(--gutter) * 2), var(--container))` e centralizado com `margin-inline: auto`.
     - `.no-scroll`: aplicado ao `body` para travar scroll com `overflow: hidden;`.
 
-- [ ] **TEST-002**: Teste de validação sintática do CSS.
+- [x] **TEST-002**: Teste de validação sintática do CSS.
   - **Método:** Inspecionar o arquivo `styles.css` e verificar se não há propriedades inválidas, seletores de ID para estilização ou regras fora das camadas declaradas.
   - **Critério de aceite:** Arquivo CSS válido, com as 6 camadas declaradas e tokens correspondentes a `DESIGN-SYSTEM.md`.
 
@@ -118,7 +118,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
 
 ## Fase 2: Shell Global (Header, Menu Mobile, Footer e JavaScript Base)
 
-- [ ] **TASK-008**: Implementar componentes de Header e Navegação Desktop em `@layer layout` e `@layer components`.
+- [x] **TASK-008**: Implementar componentes de Header e Navegação Desktop em `@layer layout` e `@layer components`.
   - **Arquivo:** `assets/css/styles.css`
   - **Estilos:**
     - `.site-header`: sticky no topo, `top: 0`, altura `--header-h`, fundo `--color-bg`, borda inferior `1px solid var(--color-line)`, `z-index: var(--z-header)`.
@@ -129,21 +129,21 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     - `.site-nav__link[aria-current="page"]`: cor `--color-ink`, sublinhado de 1px com offset de 6px.
     - `.nav-toggle`: botão de 44x44px visível em mobile, `display: flex; align-items: center; justify-content: center;` e oculto a partir de 768px (`display: none`).
 
-- [ ] **TASK-009**: Implementar Menu Mobile Overlay em `assets/css/styles.css`.
+- [x] **TASK-009**: Implementar Menu Mobile Overlay em `assets/css/styles.css`.
   - **Estilos:**
     - `.mobile-menu`: fixo, abaixo do header (`top: var(--header-h); left: 0; width: 100%; height: calc(100vh - var(--header-h));`), fundo `--color-bg`, `z-index: var(--z-menu)`.
     - Estado oculto: `visibility: hidden; opacity: 0; pointer-events: none; transform: translateY(-8px); transition: opacity var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out), visibility var(--dur-base);`.
     - Estado ativo (`.is-open`): `visibility: visible; opacity: 1; pointer-events: auto; transform: translateY(0);`.
     - Links do menu mobile: `--fs-h2`, empilhados verticalmente com padding e réguas de 1px entre si (`border-bottom: 1px solid var(--color-line);`).
 
-- [ ] **TASK-010**: Implementar Footer Global em `@layer layout` e `@layer components`.
+- [x] **TASK-010**: Implementar Footer Global em `@layer layout` e `@layer components`.
   - **Arquivo:** `assets/css/styles.css`
   - **Estilos:**
     - `.site-footer`: fundo `--color-bg`, borda superior `1px solid var(--color-line)`, padding `64px 0 32px`.
     - `.site-footer__grid`: empilhado no mobile; grid de 4 colunas a partir de 768px (marca/tagline, navegação, redes, metadados/ano).
     - `.site-footer__back-to-top`: link discreto com ícone de seta para cima, alinhado à direita.
 
-- [ ] **TASK-011**: Criar `assets/js/main.js` com inicialização de JS e controle de navegação mobile.
+- [x] **TASK-011**: Criar `assets/js/main.js` com inicialização de JS e controle de navegação mobile.
   - **Caminho:** `assets/js/main.js`
   - **Código:**
     - Adicionar classe `js` na raiz: `document.documentElement.classList.add('js');`.
@@ -160,7 +160,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
       - Escuta clique em qualquer link do menu para fechar o menu.
       - Fecha menu automaticamente em evento `resize` quando largura for ≥ 768px.
 
-- [ ] **TEST-003**: Teste de validação do Header, Footer e Menu Mobile.
+- [x] **TEST-003**: Teste de validação do Header, Footer e Menu Mobile.
   - **Cenário de teste:** Criar uma página temporária de teste ou carregar a estrutura básica no navegador.
   - **Passos:**
     1. Reduzir janela para 375px (mobile).
@@ -173,7 +173,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
 
 ## Fase 3: Construção da Página Inicial (`index.html`)
 
-- [ ] **TASK-012**: Implementar componentes de Botões, Tags e Section Headers em `assets/css/styles.css`.
+- [x] **TASK-012**: Implementar componentes de Botões, Tags e Section Headers em `assets/css/styles.css`.
   - **Botões:**
     - `.btn`: `display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 12px 24px; border-radius: var(--radius); font-size: var(--fs-small); font-weight: 500; transition: background var(--dur-fast), color var(--dur-fast), border-color var(--dur-fast), transform var(--dur-fast);`
     - `.btn--primary`: fundo `var(--color-ink)`, cor `var(--color-bg)`, borda `1px solid var(--color-ink)`. Hover: fundo `#262626`.
@@ -186,7 +186,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
   - **Section Head:**
     - `.section-head`: label em `--fs-label` uppercase, título em `--fs-h2`, lead em `--fs-lead`.
 
-- [ ] **TASK-013**: Implementar estilos do Project Card em `assets/css/styles.css`.
+- [x] **TASK-013**: Implementar estilos do Project Card em `assets/css/styles.css`.
   - **Estilos:**
     - `.project-card`: `<article>` com borda `1px solid var(--color-line)`, raio 2px, fundo `--color-bg`, transição de 200ms.
     - `.project-card__link`: bloco de link cobrindo o card inteiro.
@@ -199,13 +199,13 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     - `.project-card:hover`: borda `--color-ink`, `transform: translateY(-2px)`, zoom na imagem `scale(1.03)`.
     - `.project-card:focus-within`: contorno de foco visível.
 
-- [ ] **TASK-014**: Implementar estilos da Faixa de Contato Invertida em `assets/css/styles.css`.
+- [x] **TASK-014**: Implementar estilos da Faixa de Contato Invertida em `assets/css/styles.css`.
   - **Estilos:**
     - `.contact-strip`: fundo `var(--color-inverse-bg)`, cor `var(--color-inverse-ink)`, padding vertical `var(--section-y)`.
     - Link de e-mail: `--fs-h2`, sublinhado, cor branca.
     - Links de redes sociais com setas externas em SVG inline.
 
-- [ ] **TASK-015**: Criar o arquivo `index.html` completo conforme especificações editoriais.
+- [x] **TASK-015**: Criar o arquivo `index.html` completo conforme especificações editoriais.
   - **Caminho:** `index.html`
   - **Estrutura semântica:**
     - `<!DOCTYPE html>` e `<html lang="pt-BR">`
@@ -240,7 +240,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
         - 4 colunas com marca, links de navegação, redes sociais, copyright dinâmico via `[data-year]` e link "Voltar ao topo".
       - `<script src="assets/js/main.js" defer></script>`.
 
-- [ ] **TEST-004**: Teste e validação da página `index.html`.
+- [x] **TEST-004**: Teste e validação da página `index.html`.
   - **Método:** Iniciar servidor local (`python -m http.server 8000`) e carregar `http://localhost:8000/index.html`.
   - **Verificações:**
     1. Skip-link ganha foco ao pressionar `Tab` como primeiro elemento da página.
@@ -254,7 +254,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
 
 ## Fase 4: Página de Projetos e Sistema de Filtros (`projetos.html`)
 
-- [ ] **TASK-016**: Implementar estilos dos Filtros e Estado Vazio em `assets/css/styles.css`.
+- [x] **TASK-016**: Implementar estilos dos Filtros e Estado Vazio em `assets/css/styles.css`.
   - **Estilos:**
     - `.filters`: oculto por padrão (`display: none;`), visível apenas quando JS estiver ativo (`html.js .filters { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); margin-bottom: var(--space-7); }`).
     - `.filters__list`: flexbox com gap de `8px`.
@@ -263,7 +263,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     - `.filters__status`: mono `--fs-mono`, cor `var(--color-ink-3)`.
     - `.empty-state`: padding de 64px centralizado na grade, oculto por padrão (`display: none;`), visível quando ativo (`&.is-visible { display: block; text-align: center; }`).
 
-- [ ] **TASK-017**: Criar a página `projetos.html`.
+- [x] **TASK-017**: Criar a página `projetos.html`.
   - **Caminho:** `projetos.html`
   - **Conteúdo estrutural:**
     - `<head>` completo com metadados SEO específicos de Projetos conforme `docs/CONTENT.md` e link canonical `https://[USUARIO].github.io/projetos.html`.
@@ -286,7 +286,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
          - Link "Vamos conversar" apontando para `contato.html`.
     - Footer global idêntico ao da Home.
 
-- [ ] **TASK-018**: Implementar a lógica dos Filtros em `assets/js/main.js`.
+- [x] **TASK-018**: Implementar a lógica dos Filtros em `assets/js/main.js`.
   - **Função:** `initProjectFilters()`
   - **Comportamento:**
     - Seleciona botões de filtro (`[data-filter]`), cards (`.project-card[data-category]`), contador (`[data-filter-status]`) e empty state (`[data-empty-state]`).
@@ -299,7 +299,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
       - Se o número de visíveis for 0, exibe o empty state; se for > 0, oculta o empty state.
     - Botão "Ver todos" do empty state reseta o filtro para `all`, disparando clique no botão "Todos".
 
-- [ ] **TEST-005**: Teste e validação de filtros e grade em `projetos.html`.
+- [x] **TEST-005**: Teste e validação de filtros e grade em `projetos.html`.
   - **Passos:**
     1. Abrir `projetos.html` no navegador.
     2. Verificar exibição inicial de 6 cards e contador "6 projetos".
@@ -314,7 +314,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
 
 ## Fase 5: Construção da Página Sobre (`sobre.html`)
 
-- [ ] **TASK-019**: Implementar estilos específicos da Página Sobre em `assets/css/styles.css`.
+- [x] **TASK-019**: Implementar estilos específicos da Página Sobre em `assets/css/styles.css`.
   - **Estilos:**
     - Layout de duas colunas para Intro (`.about-intro`): 5 colunas para foto e 7 colunas para texto a partir de 900px (`@media (min-width: 900px)`). Empilhado abaixo de 900px.
     - Foto do perfil (`.about-portrait`): proporção 4:5 (`aspect-ratio: 4 / 5`), moldura de 1px, `filter: grayscale(1) contrast(1.05);`.
@@ -324,7 +324,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     - Lista de Trajetória (`.timeline`): lista cronológica inversa com réguas de 1px entre itens, coluna com período em mono, cargo e empresa, seguidos por linha de contexto.
     - Seção "Como eu trabalho" (`.principles-grid`): 3 colunas desktop / 1 coluna mobile com título e explicação concisa.
 
-- [ ] **TASK-020**: Criar a página `sobre.html`.
+- [x] **TASK-020**: Criar a página `sobre.html`.
   - **Caminho:** `sobre.html`
   - **Conteúdo estrutural:**
     - `<head>` completo com metadados SEO de Sobre e link canonical `https://[USUARIO].github.io/sobre.html`.
@@ -345,7 +345,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
          - Link "Entrar em contato" apontando para `contato.html`.
     - Footer global idêntico ao padrão.
 
-- [ ] **TEST-006**: Teste e validação da página `sobre.html`.
+- [x] **TEST-006**: Teste e validação da página `sobre.html`.
   - **Verificações:**
     1. Abrir `sobre.html` no navegador.
     2. Inspecionar largura do texto de bio: deve respeitar o limite máximo confortável de 68ch sem quebras anormais.
@@ -357,7 +357,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
 
 ## Fase 6: Página de Contato e Funcionalidade de Cópia (`contato.html`)
 
-- [ ] **TASK-021**: Implementar estilos da Página de Contato em `assets/css/styles.css`.
+- [x] **TASK-021**: Implementar estilos da Página de Contato em `assets/css/styles.css`.
   - **Estilos:**
     - Bloco de E-mail (`.contact-email-box`): e-mail em destaque com tamanho `clamp(1.25rem, 4vw, 2.25rem)`, peso 500, link `mailto:` sublinhado.
     - Botão "Copiar e-mail" alinhado ao lado no desktop e abaixo no mobile.
@@ -365,7 +365,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     - Lista de redes sociais (`.social-links`): links externos em display flex com espaçamento e ícones SVG inline (`arrow-up-right`).
     - Tabela/Lista de detalhes de disponibilidade (`.contact-details`): chave-valor com linha divisória de 1px.
 
-- [ ] **TASK-022**: Implementar lógica de cópia de e-mail em `assets/js/main.js`.
+- [x] **TASK-022**: Implementar lógica de cópia de e-mail em `assets/js/main.js`.
   - **Função:** `initCopyEmail()`
   - **Comportamento detalhado:**
     - Seleciona botões de cópia (`[data-copy-email]`) e regiões de feedback (`[data-copy-feedback]`).
@@ -380,7 +380,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
       - Em caso de erro:
         - Atualiza feedback com mensagem: "Não foi possível copiar. Selecione o e-mail acima."
 
-- [ ] **TASK-023**: Criar a página `contato.html`.
+- [x] **TASK-023**: Criar a página `contato.html`.
   - **Caminho:** `contato.html`
   - **Conteúdo estrutural:**
     - `<head>` completo com metadados SEO de Contato e link canonical `https://[USUARIO].github.io/contato.html`.
@@ -403,7 +403,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
          - `<p class="contact-note">Sem formulário: e-mail direto funciona melhor para mim.</p>`
     - Footer global padrão.
 
-- [ ] **TEST-007**: Teste da página `contato.html` e do recurso de cópia.
+- [x] **TEST-007**: Teste da página `contato.html` e do recurso de cópia.
   - **Passos:**
     1. Abrir `contato.html` no navegador.
     2. Clicar no botão "Copiar e-mail":
@@ -418,7 +418,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
 
 ## Fase 7: Microinterações, Movimento e Acessibilidade de Animação
 
-- [ ] **TASK-024**: Implementar animação de Reveal ao Rolar em `assets/css/styles.css` e `assets/js/main.js`.
+- [x] **TASK-024**: Implementar animação de Reveal ao Rolar em `assets/css/styles.css` e `assets/js/main.js`.
   - **CSS:**
     - Elementos com reveal (`[data-reveal]`): por padrão visíveis sem JS.
     - Quando JS ativo (`html.js [data-reveal]`): `opacity: 0; transform: translateY(14px); transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);`.
@@ -428,11 +428,11 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     - Se movimento reduzido estiver ativo ou `IntersectionObserver` não for suportado, aplicar imediatamente `.is-revealed` a todos os elementos.
     - Caso contrário, observar os elementos e aplicar `.is-revealed` com stagger máximo de `60ms` entre elementos vizinhos, desobservando o elemento em seguida (revelar apenas uma vez).
 
-- [ ] **TASK-025**: Implementar comportamento de "Voltar ao topo" suave em `assets/js/main.js`.
+- [x] **TASK-025**: Implementar comportamento de "Voltar ao topo" suave em `assets/js/main.js`.
   - **Função:** `initBackToTop()`
   - **Comportamento:** Ao clicar nos links de voltar ao topo (`[data-back-to-top]`), rolar a página para o topo usando `window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' })`.
 
-- [ ] **TASK-026**: Garantir suporte estrito a `prefers-reduced-motion: reduce` no CSS.
+- [x] **TASK-026**: Garantir suporte estrito a `prefers-reduced-motion: reduce` no CSS.
   - **Regra obrigatória em `assets/css/styles.css`:**
     ```css
     @media (prefers-reduced-motion: reduce) {
@@ -447,7 +447,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     }
     ```
 
-- [ ] **TEST-008**: Teste de movimento e redução de movimento.
+- [x] **TEST-008**: Teste de movimento e redução de movimento.
   - **Passos:**
     1. Rolar a página normalmente: observar o fade e translateY suave dos blocos e cards.
     2. No Chrome DevTools (Rendering tab), ativar a opção de emulação `prefers-reduced-motion: reduce`.
@@ -458,7 +458,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
 
 ## Fase 8: Auditoria de Qualidade, Acessibilidade, Responsividade e Performance
 
-- [ ] **TEST-009**: Auditoria de Links e Metadados.
+- [x] **TEST-009**: Auditoria de Links e Metadados.
   - **Verificações:**
     - Percorrer as 4 páginas (`index.html`, `projetos.html`, `sobre.html`, `contato.html`).
     - Todos os links internos apontam para arquivos existentes e carregam sem erro 404.
@@ -466,27 +466,27 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
     - Cada página possui `<title>` exclusivo, `<meta name="description">` preenchida e `<link rel="canonical">` adequado.
   - **Critério de aceite:** 100% dos links funcionais e metadados válidos.
 
-- [ ] **TEST-010**: Auditoria de Responsividade (320px a 1440px).
+- [x] **TEST-010**: Auditoria de Responsividade (320px a 1440px).
   - **Verificações:**
     - Testar cada página nas seguintes larguras no DevTools: `320px`, `375px`, `480px`, `640px`, `768px`, `1024px`, `1280px`, `1440px`.
     - Verificar que a barra de rolagem horizontal nunca aparece (`document.documentElement.scrollWidth <= window.innerWidth`).
     - Verificar que nenhum texto ou botão fica truncado ou sobreposto.
   - **Critério de aceite:** Zero overflow horizontal em todas as páginas e breakpoints.
 
-- [ ] **TEST-011**: Auditoria de Navegação Completa por Teclado.
+- [x] **TEST-011**: Auditoria de Navegação Completa por Teclado.
   - **Verificações:**
     - Navegar por todas as páginas usando apenas as teclas `Tab`, `Shift + Tab`, `Enter`, `Espaço` e `Escape`.
     - O anel de foco de 2px deve ser nítido e visível em todos os elementos interativos (links, botões, cards).
     - O skip link deve aparecer ao primeiro `Tab` e rolar até `#main-content` ao pressionar `Enter`.
   - **Critério de aceite:** Nenhum elemento interativo é inacessível ou possui foco invisível.
 
-- [ ] **TEST-012**: Auditoria de Contraste e Paleta Monocromática.
+- [x] **TEST-012**: Auditoria de Contraste e Paleta Monocromática.
   - **Verificações:**
     - Inspecionar estilos com analisador de contraste: texto normal com razão mínima de `4.5:1`, texto grande/títulos com no mínimo `3:1`.
     - Verificar que nenhuma cor além de preto, branco e a escala de cinzas neutros foi utilizada em nenhum seletor CSS.
   - **Critério de aceite:** Zero cores de acento, sombras ou gradientes encontrados.
 
-- [ ] **TEST-013**: Auditoria de Degradação sem JavaScript.
+- [x] **TEST-013**: Auditoria de Degradação sem JavaScript.
   - **Verificações:**
     - Desativar o JavaScript no navegador (`Disable JavaScript`).
     - Recarregar as 4 páginas.
@@ -498,7 +498,7 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
       - Os menus de navegação desktop continuam acessíveis.
   - **Critério de aceite:** Degradação graciosa sem perda de conteúdo.
 
-- [ ] **TEST-014**: Auditoria de Placeholders e Comentários TODO.
+- [x] **TEST-014**: Auditoria de Placeholders e Comentários TODO.
   - **Comando:** Executar busca no repositório por `TODO(content)` e colchetes `[` para listar todas as pendências editoriais.
   - **Critério de aceite:** Nenhum lorem ipsum presente; todos os dados que dependem de preenchimento real do usuário estão documentados com a convenção `<!-- TODO(content): ... --> [PLACEHOLDER]`.
 
@@ -506,20 +506,20 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
 
 ## Fase 9: Deploy e Publicação no GitHub Pages
 
-- [ ] **TASK-027**: Verificação dos arquivos essenciais na raiz do repositório.
+- [x] **TASK-027**: Verificação dos arquivos essenciais na raiz do repositório.
   - **Checklist:**
-    - [ ] `index.html` na raiz
-    - [ ] `projetos.html` na raiz
-    - [ ] `sobre.html` na raiz
-    - [ ] `contato.html` na raiz
-    - [ ] `.nojekyll` na raiz
-    - [ ] `assets/css/styles.css`
-    - [ ] `assets/js/main.js`
-    - [ ] `assets/img/profile.webp`
-    - [ ] `assets/img/projects/projeto-01.webp` até `projeto-06.webp`
+    - [x] `index.html` na raiz
+    - [x] `projetos.html` na raiz
+    - [x] `sobre.html` na raiz
+    - [x] `contato.html` na raiz
+    - [x] `.nojekyll` na raiz
+    - [x] `assets/css/styles.css`
+    - [x] `assets/js/main.js`
+    - [x] `assets/img/profile.webp`
+    - [x] `assets/img/projects/projeto-01.webp` até `projeto-06.webp`
   - **Critério de aceite:** Todos os arquivos nos caminhos exatos previstos na árvore de arquitetura.
 
-- [ ] **TASK-028**: Fornecer ao usuário os comandos exatos de inicialização e deploy via Git.
+- [x] **TASK-028**: Fornecer ao usuário os comandos exatos de inicialização e deploy via Git.
   - **Comandos informativos para o usuário:**
     ```bash
     # 1. Testar localmente
@@ -541,37 +541,37 @@ Fase 9: Checklist Final e Preparação para Deploy no GitHub Pages
 
 | ID da Tarefa | Descrição Resumida | Arquivo Envolvido | Status | Teste Associado |
 |---|---|---|---|---|
-| TASK-001 | Criação de pastas do projeto | Diretórios `assets/...` | [ ] Pendente | TEST-001 |
-| TASK-002 | Criação do `.nojekyll` | `.nojekyll` | [ ] Pendente | TEST-001 |
-| TASK-003 | Criação de imagens de placeholder | `assets/img/...` | [ ] Pendente | TEST-001 |
-| TASK-004 | Declaração de `@layer` | `assets/css/styles.css` | [ ] Pendente | TEST-002 |
-| TASK-005 | Tokens e variáveis CSS | `assets/css/styles.css` | [ ] Pendente | TEST-002 |
-| TASK-006 | Reset CSS semântico | `assets/css/styles.css` | [ ] Pendente | TEST-002 |
-| TASK-007 | Base, tipografia e utilities | `assets/css/styles.css` | [ ] Pendente | TEST-002 |
-| TASK-008 | Layout Header e Nav desktop | `assets/css/styles.css` | [ ] Pendente | TEST-003 |
-| TASK-009 | Menu Mobile Overlay | `assets/css/styles.css` | [ ] Pendente | TEST-003 |
-| TASK-010 | Layout Footer global | `assets/css/styles.css` | [ ] Pendente | TEST-003 |
-| TASK-011 | JavaScript Shell e Mobile Nav | `assets/js/main.js` | [ ] Pendente | TEST-003 |
-| TASK-012 | Botões, Tags e Section Heads | `assets/css/styles.css` | [ ] Pendente | TEST-004 |
-| TASK-013 | Project Card CSS | `assets/css/styles.css` | [ ] Pendente | TEST-004 |
-| TASK-014 | Faixa de Contato Invertida CSS | `assets/css/styles.css` | [ ] Pendente | TEST-004 |
-| TASK-015 | Construção de `index.html` | `index.html` | [ ] Pendente | TEST-004 |
-| TASK-016 | Filtros e Estado Vazio CSS | `assets/css/styles.css` | [ ] Pendente | TEST-005 |
-| TASK-017 | Construção de `projetos.html` | `projetos.html` | [ ] Pendente | TEST-005 |
-| TASK-018 | Lógica JS dos Filtros | `assets/js/main.js` | [ ] Pendente | TEST-005 |
-| TASK-019 | Estilos da Página Sobre | `assets/css/styles.css` | [ ] Pendente | TEST-006 |
-| TASK-020 | Construção de `sobre.html` | `sobre.html` | [ ] Pendente | TEST-006 |
-| TASK-021 | Estilos da Página de Contato | `assets/css/styles.css` | [ ] Pendente | TEST-007 |
-| TASK-022 | Lógica JS de Cópia de E-mail | `assets/js/main.js` | [ ] Pendente | TEST-007 |
-| TASK-023 | Construção de `contato.html` | `contato.html` | [ ] Pendente | TEST-007 |
-| TASK-024 | Animação de Reveal ao rolar | `styles.css` / `main.js` | [ ] Pendente | TEST-008 |
-| TASK-025 | Voltar ao topo suave | `assets/js/main.js` | [ ] Pendente | TEST-008 |
-| TASK-026 | Regras `prefers-reduced-motion` | `assets/css/styles.css` | [ ] Pendente | TEST-008 |
-| TEST-009 | Auditoria de Links e Metadados | Todas as páginas | [ ] Pendente | TEST-009 |
-| TEST-010 | Auditoria de Responsividade | Todas as páginas | [ ] Pendente | TEST-010 |
-| TEST-011 | Auditoria de Acessibilidade/Teclado | Todas as páginas | [ ] Pendente | TEST-011 |
-| TEST-012 | Auditoria de Contraste Monocromático| Todas as páginas | [ ] Pendente | TEST-012 |
-| TEST-013 | Auditoria Sem JavaScript | Todas as páginas | [ ] Pendente | TEST-013 |
-| TEST-014 | Auditoria de Placeholders | Repositório todo | [ ] Pendente | TEST-014 |
-| TASK-027 | Checklist final de arquivos | Raiz do projeto | [ ] Pendente | - |
-| TASK-028 | Instruções de publicação/Git | Documentação | [ ] Pendente | - |
+| TASK-001 | Criação de pastas do projeto | Diretórios `assets/...` | [x] Concluído | TEST-001 |
+| TASK-002 | Criação do `.nojekyll` | `.nojekyll` | [x] Concluído | TEST-001 |
+| TASK-003 | Criação de imagens de placeholder | `assets/img/...` | [x] Concluído | TEST-001 |
+| TASK-004 | Declaração de `@layer` | `assets/css/styles.css` | [x] Concluído | TEST-002 |
+| TASK-005 | Tokens e variáveis CSS | `assets/css/styles.css` | [x] Concluído | TEST-002 |
+| TASK-006 | Reset CSS semântico | `assets/css/styles.css` | [x] Concluído | TEST-002 |
+| TASK-007 | Base, tipografia e utilities | `assets/css/styles.css` | [x] Concluído | TEST-002 |
+| TASK-008 | Layout Header e Nav desktop | `assets/css/styles.css` | [x] Concluído | TEST-003 |
+| TASK-009 | Menu Mobile Overlay | `assets/css/styles.css` | [x] Concluído | TEST-003 |
+| TASK-010 | Layout Footer global | `assets/css/styles.css` | [x] Concluído | TEST-003 |
+| TASK-011 | JavaScript Shell e Mobile Nav | `assets/js/main.js` | [x] Concluído | TEST-003 |
+| TASK-012 | Botões, Tags e Section Heads | `assets/css/styles.css` | [x] Concluído | TEST-004 |
+| TASK-013 | Project Card CSS | `assets/css/styles.css` | [x] Concluído | TEST-004 |
+| TASK-014 | Faixa de Contato Invertida CSS | `assets/css/styles.css` | [x] Concluído | TEST-004 |
+| TASK-015 | Construção de `index.html` | `index.html` | [x] Concluído | TEST-004 |
+| TASK-016 | Filtros e Estado Vazio CSS | `assets/css/styles.css` | [x] Concluído | TEST-005 |
+| TASK-017 | Construção de `projetos.html` | `projetos.html` | [x] Concluído | TEST-005 |
+| TASK-018 | Lógica JS dos Filtros | `assets/js/main.js` | [x] Concluído | TEST-005 |
+| TASK-019 | Estilos da Página Sobre | `assets/css/styles.css` | [x] Concluído | TEST-006 |
+| TASK-020 | Construção de `sobre.html` | `sobre.html` | [x] Concluído | TEST-006 |
+| TASK-021 | Estilos da Página de Contato | `assets/css/styles.css` | [x] Concluído | TEST-007 |
+| TASK-022 | Lógica JS de Cópia de E-mail | `assets/js/main.js` | [x] Concluído | TEST-007 |
+| TASK-023 | Construção de `contato.html` | `contato.html` | [x] Concluído | TEST-007 |
+| TASK-024 | Animação de Reveal ao rolar | `styles.css` / `main.js` | [x] Concluído | TEST-008 |
+| TASK-025 | Voltar ao topo suave | `assets/js/main.js` | [x] Concluído | TEST-008 |
+| TASK-026 | Regras `prefers-reduced-motion` | `assets/css/styles.css` | [x] Concluído | TEST-008 |
+| TEST-009 | Auditoria de Links e Metadados | Todas as páginas | [x] Concluído | TEST-009 |
+| TEST-010 | Auditoria de Responsividade | Todas as páginas | [x] Concluído | TEST-010 |
+| TEST-011 | Auditoria de Acessibilidade/Teclado | Todas as páginas | [x] Concluído | TEST-011 |
+| TEST-012 | Auditoria de Contraste Monocromático| Todas as páginas | [x] Concluído | TEST-012 |
+| TEST-013 | Auditoria Sem JavaScript | Todas as páginas | [x] Concluído | TEST-013 |
+| TEST-014 | Auditoria de Placeholders | Repositório todo | [x] Concluído | TEST-014 |
+| TASK-027 | Checklist final de arquivos | Raiz do projeto | [x] Concluído | - |
+| TASK-028 | Instruções de publicação/Git | Documentação | [x] Concluído | - |
